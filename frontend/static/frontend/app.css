@@ -1,0 +1,171 @@
+.alert-warning {
+    background-color: oldlace !important;
+}
+
+.avoid-nav {
+    padding-top: 4rem;
+}
+
+.avoid-nav-lg {
+    padding-top: 5rem;
+}
+
+.background_color {
+    background: linear-gradient(aliceblue 75%, floralwhite);
+}
+
+.background_color_2 {
+    background: linear-gradient(floralwhite 100%, aliceblue);
+}
+
+.background_color_3 {
+    background: linear-gradient(floralwhite 30%, aliceblue);
+}
+
+.background_color_4 {
+    background: linear-gradient(aliceblue 30%, floralwhite);
+}
+
+.background_color_5 {
+    background: linear-gradient(floralwhite, wheat);
+}
+
+body {
+    color: #664d03 !important;
+}
+
+.calendar {
+    height: 100vh;
+}
+
+.giving {
+    font-size: 1.4rem;
+    color: #0746FF;
+    text-decoration: none;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+}
+
+#gmap_canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.g-recaptcha div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(aliceblue 50%, floralwhite);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.link_style {
+    text-decoration: none;
+    color: #027f84;
+}
+
+.lg-padding-bottom {
+    padding-bottom: 2rem;
+}
+
+.lg-padding-top {
+    padding-top: 2rem;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 60vh;
+    width: 100%;
+}
+
+.nav_bg_color {
+    background-color: #027f84;
+}
+
+.nav_text_color {
+    color: white !important;
+}
+
+:root {
+    --bs-body-bg: transparent !important;
+}
+
+.sm-margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.sm-padding-bottom {
+    padding-bottom: 1rem;
+}
+
+.sm-padding-top {
+    padding-top: 1rem;
+}
+
+.staff_bio {
+    font-size: 1.25rem;
+}
+
+.staff_divider {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.staff_name {
+    font-size: 2rem;
+}
+
+.staff_pic {
+    width: 75%;
+}
+
+.welcome_lsc_logo {
+    width: 75vw;
+    height: auto;
+    padding-top: 1rem;
+}
+
+.welcome_lsc_logo_mobile {
+    width: 85vw;
+    height: auto;
+}
+
+.welcome_lsc_logo_sm_mobile {
+    width: 95vw;
+    height: auto;
+}
+
+.welcome_padding_top {
+    padding-top: 3rem;
+}
+
+.welcome_padding_sm_top {
+    padding-top: 1.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

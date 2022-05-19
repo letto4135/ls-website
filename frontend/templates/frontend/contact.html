@@ -1,0 +1,30 @@
+<div class="avoid-nav text-center">
+    <h3>Prayer Request</h3>
+    <form action="/contact" method="post">
+        <div class="row justify-content-center sm-margin-bottom">
+            {% csrf_token %}
+            {% for field in form %}
+                {% if field.id_for_label == "id_message" %}
+                    <div class="row justify-content-center sm-margin-bottom">
+                        <div class="col-md-6">
+                            {{ field.errors }}
+                            {{ field.label }} {{ field }}
+                            {% if field.help_text %}
+                                <p class="help">{{ field.help_text|safe }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% else %}
+                        <div class="col-md-5">
+                            {{ field.errors }}
+                            {{ field.label }} {{ field }}
+                            {% if field.help_text %}
+                                <p class="help">{{ field.help_text|safe }}</p>
+                            {% endif %}
+                        </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+    </form>
+</div>

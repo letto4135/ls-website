@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'frontend/app.css' %}">
+<div>
+  <nav class="nav_bg_color navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand nav_text_color" href="/#top">Liberty Street Church</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#church-nav" aria-controls="church-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="church-nav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link nav_text_color" href="/times">Service Times</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav_text_color" href="/location">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav_text_color"  href="/staff">Staff</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav_text_color" href="/groups">Small Groups</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav_text_color" href="/events">Calendar</a>
+          </li>
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link nav_text_color" href="/newsletter">Newsletter</a>-->
+<!--          </li>-->
+          <li class="nav-item">
+            <a class="nav-link nav_text_color" href="/giving">Giving</a>
+          </li>
+        </ul>
+        <div class="nav-item">
+          <a class="nav-link nav_text_color" href="/contact">Prayer Request</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

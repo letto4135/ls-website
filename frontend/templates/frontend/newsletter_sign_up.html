@@ -1,0 +1,18 @@
+<div class="avoid-nav text-center">
+    <h3>Sign up for the church newsletter!</h3>
+    <form action="/newsletter" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="row justify-content-center sm-margin-bottom">
+                <div class="col-md-5">
+                    {{ field.errors }}
+                    {{ field.label }} {{ field }}
+                    {% if field.help_text %}
+                        <p class="help">{{ field.help_text|safe }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+    </form>
+</div>

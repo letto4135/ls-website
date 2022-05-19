@@ -1,0 +1,20 @@
+<div class={bg} id={id}>
+  <div class="container avoid-nav">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-10">
+        {% for i in servicedata %}
+          <div class="alert alert-warning">
+            <h1>{{i.text}}</h1>
+            <h1>
+              {% for j in links %}
+                {% if j.service_id == i.id %}
+                  <a href="{{j.link}}" class="link_style" target="_blank" rel="noreferrer">{{j.link_name}}</a>
+                {% endif %}
+              {% endfor %}
+            </h1>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

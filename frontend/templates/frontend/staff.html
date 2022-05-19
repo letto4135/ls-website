@@ -1,0 +1,31 @@
+<div class={{bg}}>
+  <div class="container avoid-nav-lg">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center sm-padding-bottom">
+        <h1>Meet the Liberty Street Staff!</h1>
+      </div>
+    </div>
+    <div>
+      {% for i in staffdata %}
+        <div class="col-md vertical-align-end sm-top-padding">
+          <div class="staff_divider">
+            <div>
+              <div class="row">
+                  <div class="col-md-6 text-md-end text-center">
+                    <h1 class="staff_name">{{i.name}}</h1>
+                    {% if i.image %}
+                      <img class="staff_pic" src={{i.image}} alt="Liberty Street Church Staff Member {{i.name}}" />
+                    {% endif %}
+                  </div>
+                  <div class="col-md-6 text-md-start text-center">
+                    <h2 class="staff_title">{{i.title}}</h2>
+                    <p class="staff_bio">{{i.bio}}</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

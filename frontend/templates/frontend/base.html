@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta name="description" content="Liberty Street Church of God"/>
+  <title>Liberty Street Church of God</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="icon" href="{% static 'images/icon.png' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'frontend/app.css' %}">
+</head>
+<body>
+{% include "frontend/navbar.html" %}
+{% block content %}
+  {% if request.path == "/contact" %}
+    {% include "frontend/contact.html" %}
+  {% elif request.path == "/events" %}
+    {% include "frontend/events.html" %}
+  {% elif request.path == "/giving" %}
+    {% include "frontend/giving.html" %}
+  {% elif request.path == "/location" %}
+    {% include "frontend/location.html" %}
+  {% elif request.path == "/newsletter" %}
+    {% include "frontend/newsletter_sign_up.html" %}
+  {% elif request.path == "/newsletter_thanks" %}
+    {% include "frontend/newsletter_sign_up_thanks.html" %}
+  {% elif request.path == "/times" %}
+    {% include "frontend/services.html" %}
+  {% elif request.path == "/groups" %}
+    {% include "frontend/smallgroups.html" %}
+  {% elif request.path == "/staff" %}
+    {% include "frontend/staff.html" %}
+  {% elif request.path == "/thanks" %}
+    {% include "frontend/thanks.html" %}
+  {% else %}
+    {% include "frontend/welcome.html" with bg="background_color_1" id="welcome" %}
+    {% include "frontend/services.html" with bg="background_color_2" id="services" %}
+    {% include "frontend/location.html" with bg="background_color_3" id="location" %}
+    {% include "frontend/staff.html" with bg="background_color_4" id="staff" %}
+    {% include "frontend/giving.html" with bg="background_color_5" id="giving" %}
+  {% endif %}
+{% endblock %}
+</body>
+</html>

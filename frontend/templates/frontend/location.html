@@ -1,0 +1,20 @@
+{% load static %}
+<div class={bg} id={id}>
+  <div class="container avoid-nav-lg">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <img src="{% static 'images/other/lsc_where_are_we.jpg' %}" class="mapouter sm-margin-bottom"
+             alt="Location of LSC in relation to LSC Kids and The Escape."/>
+      </div>
+      <div class="col-md-6">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe id="gmap_canvas" title="Liberty Street Church Location"
+                    src="https://maps.google.com/maps?q=1301%20Liberty%20St%20Parkersburg,%20WV%2026101&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

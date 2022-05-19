@@ -1,0 +1,16 @@
+<div class="{{bg}} lg-padding-bottom">
+  {% for i in groups %}
+  <div>
+    <div class="container avoid-nav">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-7">
+          <h1>{{i.group_name}}</h1>
+          <h2 class="fs-3">Led by {{i.led_by}}</h2>
+          <h2 class="fs-3">On {{i.when}}</h2>
+          <h2 class="fs-3">Location: {{i.location}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 LOCAL = int(os.environ.get('IS_LOCAL_ENV', 1))
 
 SECRET_KEY = os.environ.get('DJANGO_KEY', 'F190off40You(*&#$Piece983Of##$Junk34Qo91FOJ2o9{}P{:>OLP(*')
-
+CSRF_TRUSTED_ORIGINS = ['https://*.libertystreetchurch.com', 'https://libertystreetchurch.com']
 ALLOWED_HOSTS = [
     'ls-church-website.fly.dev',
     'localhost',

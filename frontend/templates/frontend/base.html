@@ -43,5 +43,32 @@
     {% include "frontend/giving.html" with bg="background_color_5" id="giving" %}
   {% endif %}
 {% endblock %}
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAikHvrY9LTeodfH-7S08iOJmsqVAcVCvs",
+    authDomain: "lschurch-1fc9d.firebaseapp.com",
+    projectId: "lschurch-1fc9d",
+    storageBucket: "lschurch-1fc9d.appspot.com",
+    messagingSenderId: "504489716559",
+    appId: "1:504489716559:web:8d587cff9f5fe57fe6733a",
+    measurementId: "G-NC6N6YV34H"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  logEvent(analytics, '{{request.path}}');
+  if ('{{log_me}}' != null) {
+      logEvent(analytics, '{{log_me}}');
+  }
+</script>
 </body>
 </html>

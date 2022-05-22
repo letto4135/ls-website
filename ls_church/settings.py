@@ -26,7 +26,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'test.libertystreetchurch.com',
     'test6.libertystreetchurch.com',
-    'libertystreetchurch.com'
+    'libertystreetchurch.com',
+    'www.libertystreetchurch.com'
 ]
 
 if LOCAL == 1:

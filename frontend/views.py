@@ -15,8 +15,6 @@ def ContactView(request):
         form = PrayerRequestForm(request.POST)
         if form.is_valid():
             # send email with sendgrid
-            print(form.cleaned_data.get('to_ls'))
-            print(form.cleaned_data.get("message"))
             message = Mail(
                 from_email="info@libertystreetchurch.com",
                 to_emails="info@libertystreetchurch.com",
@@ -48,7 +46,7 @@ def ContactView(request):
                 except Exception as e:
                     failed += 1
                     print("Exception during email send", str(e))
-
+            request.session['log_me'] = f'prayer_request_submitted'
             return redirect('/thanks')
     else:
         form = PrayerRequestForm()
@@ -90,7 +88,8 @@ def IndexView(request):
             "links": links
         }
         return render(request, 'frontend/base.html', context)
-    return render(request, 'frontend/base.html')
+    context = {}
+    return render(request, 'frontend/base.html', context)
 
 
 def Links(request):
@@ -116,6 +115,7 @@ def NewsletterView(request):
             nr.first_name = form.cleaned_data.get('first_name')
             nr.last_name = form.cleaned_data.get('last_name')
             nr.save()
+            request.session['log_me'] = f'newsletter_signup_submitted'
             return redirect('/newsletter_thanks')
     else:
         form = EmailRequestForm()
@@ -123,11 +123,19 @@ def NewsletterView(request):
 
 
 def NewsletterThanksView(request):
-    return render(request, 'frontend/base.html')
+    context = {}
+    if 'log_me' in request.session:
+        context['log_me'] = request.session['log_me']
+        del request.session['log_me']
+    return render(request, 'frontend/base.html', context)
 
 
 def PrayerThanksView(request):
-    return render(request, 'frontend/base.html')
+    context = {}
+    if 'log_me' in request.session:
+        context['log_me'] = request.session['log_me']
+        del request.session['log_me']
+    return render(request, 'frontend/base.html', context)
 
 
 def ServiceView(request):

@@ -63,13 +63,15 @@ def GivingView(request):
     data = json.loads(GivingData(request).content.decode("UTF-8"))
     if data:
         data = data[0]
-    context = {
-        "id": "giving",
-        "larger_text": data["larger_text"],
-        "smaller_text": data["smaller_text"]
-    }
+        context = {
+            "id": "giving",
+            "larger_text": data["larger_text"],
+            "smaller_text": data["smaller_text"]
+        }
 
-    return render(request, 'frontend/base.html', context)
+        return render(request, 'frontend/base.html', context)
+    else:
+        return render(request, 'frontend/base.html')
 
 
 def IndexView(request):

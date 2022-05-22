@@ -23,6 +23,7 @@ SECRET_KEY = os.environ.get('DJANGO_KEY', 'F190off40You(*&#$Piece983Of##$Junk34Q
 ALLOWED_HOSTS = [
     'ls-church-website.fly.dev',
     'localhost',
+    '127.0.0.1',
     'test.libertystreetchurch.com',
     'test6.libertystreetchurch.com',
     'libertystreetchurch.com'

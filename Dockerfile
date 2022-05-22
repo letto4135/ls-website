@@ -1,6 +1,4 @@
-ARG PYTHON_VERSION=3.7
-
-FROM python:${PYTHON_VERSION}
+FROM python:3.10
 
 RUN apt-get update && apt-get install -y \
     python3-pip \
@@ -23,5 +21,5 @@ EXPOSE 8080
 
 RUN python3 manage.py migrate
 
-# replace APP_NAME with module name
-CMD ["gunicorn", "--bind", ":8080", "--workers", "2", "ls_church.wsgi"]
+CMD ["daphne", "ls_church.asgi:application", "-b", "0.0.0.0", "-v", "2", "-p", "8080"]
+#CMD ["gunicorn", "--bind", ":8080", "--workers", "2", "ls_church.asgi"]

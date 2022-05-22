@@ -18,6 +18,7 @@ class Link(models.Model):
 class Service(models.Model):
     text = models.TextField(help_text="Links can be added to services through the Links tab. "
                                       "Service must be created first.")
+    view_order = models.IntegerField(default=1)
 
     def __str__(self):
         return f'{self.text}'

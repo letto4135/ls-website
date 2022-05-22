@@ -11,7 +11,7 @@ class LinkAdmin(admin.ModelAdmin):
 
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('text',)
+    list_display = ('text', 'view_order')
 
 
 class SmallGroupAdmin(admin.ModelAdmin):
@@ -19,7 +19,7 @@ class SmallGroupAdmin(admin.ModelAdmin):
 
 
 class StaffAdmin(admin.ModelAdmin):
-    list_display = ('name', 'title')
+    list_display = ('name', 'title', 'view_order')
 
 
 admin.site.register(Giving, GivingAdmin)

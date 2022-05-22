@@ -13,7 +13,7 @@ def LinkData(request):
 
 
 def ServiceData(request):
-    data = list(Service.objects.values())
+    data = list(Service.objects.order_by('view_order').values())
     return JsonResponse(data, safe=False)
 
 
